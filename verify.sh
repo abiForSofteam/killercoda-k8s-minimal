@@ -10,7 +10,7 @@ fi
 STATUS=$(kubectl get pod nginx-pod -o jsonpath='{.status.phase}')
 
 if [ "$STATUS" != "Running" ]; then
-  echo "Pod is not running !"
+  echo "Pod is not running"
   exit 1
 fi
 
