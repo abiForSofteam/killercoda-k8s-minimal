@@ -5,28 +5,18 @@
   "time": "5 minutes",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "background": "background.sh",
+      "foreground": "foreground.sh"
     },
     "steps": [
       {
         "title": "Step 1",
         "text": "step1.md"
       }
-    ],
-    "assets": {
-      "host01": [
-        {
-          "file": "background.sh",
-          "target": "/root/background.sh"
-        },
-        {
-          "file": "foreground.sh",
-          "target": "/root/foreground.sh"
-        }
-      ]
-    }
+    ]
   },
   "backend": {
-    "imageid": "ubuntu"
+    "imageid": "kubernetes-kubeadm-2nodes"
   }
 }
