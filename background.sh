@@ -1,9 +1,11 @@
-
----
-
-# 🔄 4. Script `background.sh` (initialisation)
-
-```bash
 #!/bin/bash
-# Aucun setup nécessaire pour ce scénario minimal
-echo "Environment ready"
+# Initialisation minimale
+
+echo "Waiting for Kubernetes to be ready..."
+
+# attendre que le cluster soit prêt
+until kubectl get nodes &> /dev/null; do
+  sleep 2
+done
+
+echo "Kubernetes is ready"
