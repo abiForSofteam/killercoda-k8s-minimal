@@ -1,23 +1,32 @@
-"details": {
-  "intro": {
-    "text": "intro.md"
-  },
-  "steps": [
-    {
-      "title": "Step 1",
-      "text": "step1.md"
-    }
-  ],
-  "assets": {
-    "host01": [
+{
+  "title": "Kubernetes Minimal Scenario",
+  "description": "Deploy nginx pod",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
       {
-        "file": "background.sh",
-        "target": "/root/background.sh"
-      },
-      {
-        "file": "foreground.sh",
-        "target": "/root/foreground.sh"
+        "title": "Step 1",
+        "text": "step1.md"
       }
-    ]
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "background.sh",
+          "target": "/root/background.sh"
+        },
+        {
+          "file": "foreground.sh",
+          "target": "/root/foreground.sh"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes"
   }
 }
