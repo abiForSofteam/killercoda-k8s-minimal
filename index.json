@@ -1,0 +1,26 @@
+{
+  "title": "Kubernetes Minimal Scenario",
+  "description": "Deploy a simple nginx pod",
+  "difficulty": "beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Deploy your first Pod",
+        "text": "step1.md"
+      }
+    ],
+    "intro": {
+      "text": "step1.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "background.sh", "target": "/root/background.sh"},
+        {"file": "foreground.sh", "target": "/root/foreground.sh"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}
