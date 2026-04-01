@@ -1,3 +1,4 @@
 #!/bin/bash
-# Rien à exécuter en continu
+# Processus principal (obligatoire mais minimal)
+
 sleep infinity
