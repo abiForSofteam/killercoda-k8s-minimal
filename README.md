@@ -1,1 +1,0 @@
-# killercoda-k8s-minimal
