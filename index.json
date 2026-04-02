@@ -1,22 +1,6 @@
 {
-  "title": "Kubernetes Minimal Scenario",
-  "description": "Deploy nginx pod",
-  "difficulty": "beginner",
-  "time": "5 minutes",
-  "details": {
-    "intro": {
-      "text": "intro.md",
-      "background": "background.sh",
-      "foreground": "foreground.sh"
-    },
-    "steps": [
-      {
-        "title": "Step 1",
-        "text": "step1.md"
-      }
-    ]
-  },
+  "title": "Ubuntu simple",
   "backend": {
-    "imageid": "kubernetes-kubeadm-2nodes"
+    "imageid": "ubuntu"
   }
 }
