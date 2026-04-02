@@ -1,6 +1,4 @@
-# 🔧 CrashLoopBackOff — ConfigMap & subPath
-
-## Bienvenue dans cet exercice CKA
+## Bienvenue dans cet exercice - NIVEEAU CKA
 
 ---
 
