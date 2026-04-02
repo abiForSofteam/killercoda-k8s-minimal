@@ -1,6 +1,6 @@
-#  Étape 2 — Lire les logs du conteneur
+###  Étape 2 — Lire les logs du conteneur
 
-## Contexte
+#### Contexte
 
 Vous avez confirmé que le Pod est en `CrashLoopBackOff`. La prochaine étape **réflexe** en CKA : **lire les logs**. Ils contiennent le message d'erreur exact produit par nginx au moment du crash.
 

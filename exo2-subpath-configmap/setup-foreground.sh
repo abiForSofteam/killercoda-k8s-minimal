@@ -17,7 +17,7 @@ sleep 20
 
 while ! kubectl get pod nginx-subpath -n exo2-subpath &>/dev/null; do
   echo "   ... toujours en cours ..."
-  sleep 5
+  sleep 15
 done
 
 echo ""
