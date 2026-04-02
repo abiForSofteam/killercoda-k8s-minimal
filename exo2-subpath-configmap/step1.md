@@ -1,4 +1,4 @@
-# 📋 Étape 1 — Observer le Pod en erreur
+#  Étape 1 — Observer le Pod en erreur
 
 ## Contexte
 
@@ -6,7 +6,7 @@ Le Pod a été déployé dans le namespace `exo2-subpath`. Votre première missi
 
 ---
 
-## 🎯 Objectif
+##  Objectif
 
 Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces questions :
 - Quel est le statut du Pod ?
@@ -15,7 +15,7 @@ Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces ques
 
 ---
 
-## 🔬 À vous de jouer
+##  À vous de jouer
 
 Listez les Pods avec le maximum d'informations :
 
@@ -25,12 +25,12 @@ kubectl get pods -n exo2-subpath -o wide
 
 ---
 
-## 📖 Ce que vous devez comprendre
+##  Ce que vous devez comprendre
 
 > Prenez le temps d'analyser la sortie avant de lire la suite.
 
 <details>
-<summary>💡 Indice 1 — Que signifie CrashLoopBackOff ?</summary>
+<summary> Indice 1 — Que signifie CrashLoopBackOff ?</summary>
 
 `CrashLoopBackOff` signifie que le **conteneur démarre mais se termine immédiatement** avec un code d'erreur non nul.
 
@@ -41,14 +41,14 @@ Ce statut est **fondamentalement différent** de `Pending` : le Pod a été sche
 </details>
 
 <details>
-<summary>💡 Indice 2 — CrashLoopBackOff vs Pending vs ImagePullBackOff</summary>
+<summary> Indice 2 — CrashLoopBackOff vs Pending vs ImagePullBackOff</summary>
 
 | Statut | Signification |
-|--------|--------------|
-| `Pending` | Pod schedulé mais conteneur pas encore démarré |
-| `ImagePullBackOff` | L'image Docker ne peut pas être téléchargée |
+|--------------------|--------------------------------------------------|
+| `Pending`          |   Pod schedulé mais conteneur pas encore démarré |
+| `ImagePullBackOff` |      L'image Docker ne peut pas être téléchargée |
 | `CrashLoopBackOff` | L'image est OK, le conteneur démarre mais plante |
-| `Running` | Le conteneur tourne normalement |
+| `Running`          | Le conteneur tourne normalement                  |
 
 La présence d'une **adresse IP** dans la colonne `IP` confirme que le scheduling et le réseau fonctionnent — le bug est dans le processus du conteneur.
 

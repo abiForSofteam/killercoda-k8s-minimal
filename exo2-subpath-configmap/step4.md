@@ -10,7 +10,7 @@ La correction consiste à :
 
 ---
 
-## 🔬 Étape 4.1 — Supprimer le Pod défectueux
+##  Étape 4.1 — Supprimer le Pod défectueux
 
 ```
 kubectl delete pod nginx-subpath -n exo2-subpath
@@ -18,7 +18,7 @@ kubectl delete pod nginx-subpath -n exo2-subpath
 
 ---
 
-## 🔬 Étape 4.2 — Appliquer le manifeste corrigé
+##  Étape 4.2 — Appliquer le manifeste corrigé
 
 ```
 kubectl apply -f - <<EOF
@@ -45,7 +45,7 @@ EOF
 
 ---
 
-## 🔬 Étape 4.3 — Surveiller le Pod en temps réel
+##  Étape 4.3 — Surveiller le Pod en temps réel
 
 ```
 kubectl get pod nginx-subpath -n exo2-subpath -w
@@ -55,7 +55,7 @@ kubectl get pod nginx-subpath -n exo2-subpath -w
 
 ---
 
-## 🔬 Étape 4.4 — Vérifier que les fichiers de l'image sont préservés
+##  Étape 4.4 — Vérifier que les fichiers de l'image sont préservés
 
 ```
 kubectl exec nginx-subpath -n exo2-subpath -- ls /etc/nginx/
@@ -72,14 +72,14 @@ kubectl exec nginx-subpath -n exo2-subpath -- cat /etc/nginx/nginx.conf | head -
 
 ---
 
-## 📖 Ce que vous venez de faire
+##  Ce que vous venez de faire
 
-| Avant | Après |
-|-------|-------|
-| `mountPath: /etc/nginx/` | `mountPath: /etc/nginx/nginx.conf` |
-| Pas de `subPath` | `subPath: nginx.conf` |
-| Tous les fichiers de l'image écrasés | Seul `nginx.conf` est injecté |
-| `CrashLoopBackOff` | `Running` ✅ |
+|            Avant                     |                             Après                             |
+|--------------------------------------|---------------------------------------------------------------|
+|      `mountPath: /etc/nginx/`        |           `mountPath: /etc/nginx/nginx.conf`                  |
+|             Pas de `subPath`         |           `subPath: nginx.conf`                               |
+| Tous les fichiers de l'image écrasés |            Seul `nginx.conf` est injecté                      |
+|         `CrashLoopBackOff`.          |            `Running`                                          |
 
 ---
 

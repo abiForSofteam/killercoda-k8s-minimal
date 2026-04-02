@@ -1,4 +1,4 @@
-# 🧠 Étape 3 — Diagnostiquer la mauvaise configuration
+#  Étape 3 — Diagnostiquer la mauvaise configuration
 
 ## Contexte
 
@@ -27,12 +27,12 @@ kubectl get pod nginx-subpath -n exo2-subpath \
 
 ---
 
-## 📖 Ce que vous devez trouver
+##  Ce que vous devez trouver
 
 > Regardez le `mountPath` du `volumeMount`. Où est-il monté ? Quel champ important est absent ?
 
 <details>
-<summary>💡 Indice 1 — Que chercher dans volumeMounts</summary>
+<summary> Indice 1 — Que chercher dans volumeMounts</summary>
 
 Dans la section `volumeMounts`, cherchez ces champs :
 - `mountPath` : où le volume est monté dans le conteneur
@@ -43,7 +43,7 @@ Si `mountPath` pointe sur **un répertoire** et que `subPath` est absent, Kubern
 </details>
 
 <details>
-<summary>💡 Indice 2 — Effet d'un montage sans subPath</summary>
+<summary> Indice 2 — Effet d'un montage sans subPath</summary>
 
 Sans `subPath`, monter un volume ConfigMap sur `/etc/nginx/` **remplace intégralement** le contenu de ce répertoire par les fichiers de la ConfigMap.
 
@@ -54,7 +54,7 @@ Résultat : après le montage, `/etc/nginx/` ne contient **que** `nginx.conf` �
 </details>
 
 <details>
-<summary>💡 Indice 3 — L'analogie pour bien comprendre</summary>
+<summary> Indice 3 — L'analogie pour bien comprendre</summary>
 
 Monter un volume sur `/etc/nginx/` sans `subPath`, c'est comme vider entièrement une pièce pour y déposer un seul carton. Le carton (votre ConfigMap) est là, mais tout ce qui était dans la pièce avant a disparu.
 
@@ -66,13 +66,13 @@ Avec `subPath`, on pose uniquement le carton **à l'endroit précis prévu**, sa
 
 ---
 
-## 🔎 Pour aller plus loin — Variantes de pannes
+##  Pour aller plus loin — Variantes de pannes
 
-| Configuration | Symptôme |
-|---------------|----------|
-| Pas de `subPath`, montage sur répertoire | `CrashLoopBackOff` — fichiers de l'image écrasés |
+|                         Configuration         |                    Symptôme                          |
+|-----------------------------------------------|------------------------------------------------------|
+| Pas de `subPath`, montage sur répertoire      |  `CrashLoopBackOff` — fichiers de l'image écrasés    |
 | `subPath` avec clé inexistante dans ConfigMap | Pod `Pending` — événement `MountVolume.SetUp failed` |
-| `mountPath` sur fichier sans `subPath` | Refus à l'admission — Pod jamais créé |
+| `mountPath` sur fichier sans `subPath`        |        Refus à l'admission — Pod jamais créé         |
 
 ---
 
