@@ -36,9 +36,9 @@ Vous allez suivre la méthode de diagnostic CKA en 4 étapes :
 
 ### Temps estimé
 
-| Profil | Durée |
-|--------|-------|
-| Préparation CKA | 12 min |
+| Profil            |    Durée  |
+|-------------------|-----------|
+|   Préparation CKA |    12 min |
 | Première approche | 25–35 min |
 
 ---
