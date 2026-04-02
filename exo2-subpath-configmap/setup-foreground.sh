@@ -3,11 +3,11 @@
 
 echo ""
 echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║         🚀  Préparation de votre environnement...           ║"
+echo "║           Préparation de votre environnement...              ║"
 echo "║                                                              ║"
-echo "║   • Démarrage du cluster Kubernetes                         ║"
-echo "║   • Création du namespace exo2-subpath                      ║"
-echo "║   • Déploiement du Pod défectueux nginx-subpath             ║"
+echo "║   • Démarrage du cluster Kubernetes                          ║"
+echo "║   • Création du namespace exo2-subpath                       ║"
+echo "║   • Déploiement du Pod défectueux nginx-subpath              ║"
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
 

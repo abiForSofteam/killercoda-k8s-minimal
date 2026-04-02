@@ -1,4 +1,4 @@
-# 🏆 Félicitations — Exercice terminé !
+# Félicitations — Exercice terminé !
 
 ## Vous avez réussi !
 
@@ -6,7 +6,7 @@ Vous venez de résoudre un cas de panne réel rencontré en production sur des c
 
 ---
 
-## 🧠 Ce que vous avez maîtrisé
+## Ce que vous avez maîtrisé
 
 | # | Compétence |
 |---|------------|
@@ -18,7 +18,7 @@ Vous venez de résoudre un cas de panne réel rencontré en production sur des c
 
 ---
 
-## 📌 Les 3 commandes clés à retenir pour le CKA
+## Les 3 commandes clés à retenir pour le CKA
 
 ```bash
 # 1. Logs du run précédent d'un conteneur crashé
@@ -33,7 +33,7 @@ kubectl exec <pod> -n <ns> -- ls /etc/nginx/
 
 ---
 
-## 💡 La règle d'or à retenir
+## La règle d'or à retenir
 
 > **Ne jamais monter un volume ConfigMap directement sur un répertoire système d'une image officielle** (`/etc/nginx/`, `/etc/ssl/`, `/usr/share/…`) **sans `subPath`.**
 >
@@ -41,7 +41,7 @@ kubectl exec <pod> -n <ns> -- ls /etc/nginx/
 
 ---
 
-## 🔁 Nettoyage de l'environnement
+## Nettoyage de l'environnement
 
 ```
 kubectl delete namespace exo2-subpath
@@ -49,6 +49,6 @@ kubectl delete namespace exo2-subpath
 
 ---
 
-## ➡️ Et maintenant ?
+## Et maintenant ?
 
 Passez à l'exercice suivant de la formation **KubeSuccess CKA** pour continuer votre progression !

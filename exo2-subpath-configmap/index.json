@@ -11,22 +11,22 @@
     },
     "steps": [
       {
-        "title": "📋 Étape 1 — Observer le Pod en erreur",
+        "title": "Étape 1 — Observer le Pod en erreur",
         "text": "step1.md",
         "verify": "verify1.sh"
       },
       {
-        "title": "🔍 Étape 2 — Lire les logs du conteneur",
+        "title": "Étape 2 — Lire les logs du conteneur",
         "text": "step2.md",
         "verify": "verify2.sh"
       },
       {
-        "title": "🧠 Étape 3 — Diagnostiquer la mauvaise configuration",
+        "title": "Étape 3 — Diagnostiquer la mauvaise configuration",
         "text": "step3.md",
         "verify": "verify3.sh"
       },
       {
-        "title": "✅ Étape 4 — Corriger et valider",
+        "title": "Étape 4 — Corriger et valider",
         "text": "step4.md",
         "verify": "verify4.sh"
       }

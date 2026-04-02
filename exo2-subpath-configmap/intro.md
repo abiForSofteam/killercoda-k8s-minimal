@@ -4,7 +4,7 @@
 
 ---
 
-### 🎯 Votre mission
+### Votre mission
 
 Un développeur de l'équipe plateforme vient de vous contacter en urgence :
 
@@ -14,16 +14,16 @@ Un développeur de l'équipe plateforme vient de vous contacter en urgence :
 
 ---
 
-### 📦 Ce qui a été déployé pour vous
+### Ce qui a été déployé pour vous
 
-| Ressource | Nom | Namespace |
-|-----------|-----|-----------|
-| Pod | `nginx-subpath` | `exo2-subpath` |
+| Ressource | Nom                 | Namespace      |
+|-----------|---------------------|----------------|
+| Pod       | `nginx-subpath`     | `exo2-subpath` |
 | ConfigMap | `nginx-custom-conf` | `exo2-subpath` |
 
 ---
 
-### 🗺️ Plan de l'exercice
+### Plan de l'exercice
 
 Vous allez suivre la méthode de diagnostic CKA en 4 étapes :
 
@@ -34,7 +34,7 @@ Vous allez suivre la méthode de diagnostic CKA en 4 étapes :
 
 ---
 
-### ⏱️ Temps estimé
+### Temps estimé
 
 | Profil | Durée |
 |--------|-------|
@@ -43,7 +43,7 @@ Vous allez suivre la méthode de diagnostic CKA en 4 étapes :
 
 ---
 
-### 💡 Rappel important
+### Rappel important
 
 > Chaque étape dispose d'indices progressifs si vous êtes bloqué.
 > Consultez-les **uniquement** après avoir cherché par vous-même — c'est ainsi qu'on progresse vraiment.
