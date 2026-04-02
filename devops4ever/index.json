@@ -1,5 +1,8 @@
 {
   "title": "Montage d'une ConfigMap avec subPath",
+  "description": "Deploy nginx pod",
+  "difficulty": "beginner",
+  "time": "5 minutes",
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
   }
