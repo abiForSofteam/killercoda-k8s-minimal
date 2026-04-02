@@ -1,0 +1,41 @@
+{
+  "title": "🔧 CrashLoopBackOff — Déboguer un montage ConfigMap sans subPath",
+  "description": "Un Pod nginx est en CrashLoopBackOff. Diagnostic, analyse et correction d'un montage ConfigMap mal configuré. Exercice CKA niveau intermédiaire.",
+  "difficulty": "intermediate",
+  "time": "25 minutes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "setup-foreground.sh",
+      "background": "setup-background.sh"
+    },
+    "steps": [
+      {
+        "title": "📋 Étape 1 — Observer le Pod en erreur",
+        "text": "step1.md",
+        "verify": "verify1.sh"
+      },
+      {
+        "title": "🔍 Étape 2 — Lire les logs du conteneur",
+        "text": "step2.md",
+        "verify": "verify2.sh"
+      },
+      {
+        "title": "🧠 Étape 3 — Diagnostiquer la mauvaise configuration",
+        "text": "step3.md",
+        "verify": "verify3.sh"
+      },
+      {
+        "title": "✅ Étape 4 — Corriger et valider",
+        "text": "step4.md",
+        "verify": "verify4.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
