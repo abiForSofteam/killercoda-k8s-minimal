@@ -2,8 +2,17 @@
   "title": "Montage d'une ConfigMap avec subPath",
   "description": "Deploy nginx pod",
     "details": {
-    "intro": {},
-    "steps": []
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ]
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
