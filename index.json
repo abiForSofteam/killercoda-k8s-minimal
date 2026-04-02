@@ -1,0 +1,6 @@
+{
+  "title": "STORAGE - Montage d'une ConfigMap avec subPath",
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
