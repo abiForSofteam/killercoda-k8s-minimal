@@ -1,5 +1,5 @@
 {
-  "title": "#### CrashLoopBackOff — Déboguer un montage ConfigMap sans subPath",
+  "title": "CrashLoopBackOff — Déboguer un montage ConfigMap sans subPath",
   "description": "Un Pod nginx est en CrashLoopBackOff. Diagnostic, analyse et correction d'un montage ConfigMap mal configuré. Exercice CKA niveau intermédiaire.",
   "difficulty": "intermediate",
   "time": "25 minutes",
