@@ -1,4 +1,4 @@
-### Bienvenue dans cet exercice - NIVEEAU CKA
+### Bienvenue dans cet exercice - NIVEAU CKA
 
 ---
 
@@ -29,15 +29,6 @@ Vous allez suivre la méthode de diagnostic CKA en 4 étapes :
 2. **Investiguer** — Lire les logs pour trouver l'erreur exacte
 3. **Diagnostiquer** — Identifier le champ manquant dans la configuration
 4. **Corriger** — Appliquer le fix et valider que le Pod est Running
-
----
-
-### Temps estimé
-
-| Profil            |    Durée  |
-|-------------------|-----------|
-|   Préparation CKA |    12 min |
-| Première approche | 25–35 min |
 
 ---
 

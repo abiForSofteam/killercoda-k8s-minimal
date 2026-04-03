@@ -1,12 +1,12 @@
-#  Étape 1 — Observer le Pod en erreur
+###  Étape 1 — Observer le Pod en erreur
 
-## Contexte
+#### Contexte
 
 Le Pod a été déployé dans le namespace `exo2-subpath`. Votre première mission est d'observer son état et de comprendre ce qu'il vous dit.
 
 ---
 
-##  Objectif
+###  Objectif
 
 Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces questions :
 - Quel est le statut du Pod ?
@@ -15,7 +15,7 @@ Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces ques
 
 ---
 
-##  À vous de jouer
+###  À vous de jouer
 
 Listez les Pods avec le maximum d'informations :
 
@@ -25,7 +25,7 @@ kubectl get pods -n exo2-subpath -o wide
 
 ---
 
-##  Ce que vous devez comprendre
+###  Ce que vous devez comprendre
 
 > Prenez le temps d'analyser la sortie avant de lire la suite.
 
