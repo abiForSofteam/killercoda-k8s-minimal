@@ -1,12 +1,10 @@
-###  Étape 1 — Observer le Pod en erreur
-
 #### Contexte
 
 Le Pod a été déployé dans le namespace `exo2-subpath`. Votre première mission est d'observer son état et de comprendre ce qu'il vous dit.
 
 ---
 
-###  Objectif
+####  Objectif
 
 Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces questions :
 - Quel est le statut du Pod ?
@@ -25,7 +23,7 @@ kubectl get pods -n exo2-subpath -o wide
 
 ---
 
-###  Ce que vous devez comprendre
+#####  Ce que vous devez comprendre
 
 > Prenez le temps d'analyser la sortie avant de lire la suite.
 
@@ -56,8 +54,8 @@ La présence d'une **adresse IP** dans la colonne `IP` confirme que le schedulin
 
 ---
 
-## ✅ Validation
+#### ✅ Validation
 
 Une fois que vous avez observé le statut `CrashLoopBackOff` et noté le nombre de `RESTARTS`, passez à l'étape suivante.
 
-> 🏁 La validation se fait automatiquement dès que le Pod est détecté en CrashLoopBackOff dans le namespace.
+> La validation se fait automatiquement dès que le Pod est détecté en CrashLoopBackOff dans le namespace.
