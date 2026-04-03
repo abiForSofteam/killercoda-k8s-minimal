@@ -7,9 +7,9 @@
 ####  Objectif
 
 >Listez les Pods du namespace `exo2-subpath` et répondez mentalement à ces questions :
-- Quel est le statut du Pod ?
-- Combien de redémarrages a-t-il subi ?
-- Le Pod a-t-il obtenu une adresse IP ?
+>- Quel est le statut du Pod ?
+>- Combien de redémarrages a-t-il subi ?
+>- Le Pod a-t-il obtenu une adresse IP ?
 
 ---
 
