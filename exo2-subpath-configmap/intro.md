@@ -1,8 +1,8 @@
-##### **Bienvenue dans cet exercice - NIVEAU CKA**
+#### **Bienvenue dans cet exercice - NIVEAU CKA**
 
 ---
 
-### Votre mission
+#### **Votre mission**
 
 Un développeur de l'équipe plateforme vient de vous contacter en urgence :
 
