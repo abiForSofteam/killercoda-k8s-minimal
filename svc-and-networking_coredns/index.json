@@ -1,6 +1,6 @@
 {
-  "title": "Diagnostiquer et réparer un DNS cassé avec CoreDNS",
-  "description": "Exercice pratique niveau CKA : diagnostiquer une panne DNS dans un cluster Kubernetes causée par une configuration CoreDNS corrompue, puis restaurer le service.",
+  "title": "Services et réseaux",
+  "description": "Diagnostiquer et réparer un DNS cassé avec CoreDNS",
   "details": {
     "intro": {
       "text": "intro.md",
