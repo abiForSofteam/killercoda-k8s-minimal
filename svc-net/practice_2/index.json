@@ -1,10 +1,21 @@
 {
-  "title": "SERVICES & NETWORKING",
-  "description": "Diagnostiquer et réparer un DNS cassé avec CoreDNS 2",
+  "title": "Communication inter-pods en échec",
+  "description": "Diagnostiquer et rétablir la communication réseau entre pods en s'appuyant sur le modèle réseau Kubernetes et le CNI.",
+  "difficulty": "intermediate",
+  "time": "30",
   "details": {
-    "intro": {},
-    "steps": [],
-    "finish": {}
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      { "title": "Inventaire initial de la situation", "text": "step1.md" },
+      { "title": "Investigation du chemin réseau", "text": "step2.md" },
+      { "title": "Correction et explication du mécanisme", "text": "step3.md" },
+      { "title": "Vérification fonctionnelle", "text": "step4.md" }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
