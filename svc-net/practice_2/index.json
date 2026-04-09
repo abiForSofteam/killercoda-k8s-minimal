@@ -1,0 +1,12 @@
+{
+  "title": "SERVICES & NETWORKING",
+  "description": "Diagnostiquer et réparer un DNS cassé avec CoreDNS 2",
+  "details": {
+    "intro": {},
+    "steps": [],
+    "finish": {}
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
