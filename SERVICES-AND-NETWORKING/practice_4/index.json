@@ -1,0 +1,23 @@
+{
+  "title": "Gestion du DNS interne (CoreDNS)",
+  "description": "Diagnostiquer et corriger une défaillance de la résolution DNS interne dans un cluster Kubernetes via l'analyse de CoreDNS.",
+  "difficulty": "intermediate",
+  "time": "30",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      { "title": "Inventaire initial de la situation", "text": "step1.md" },
+      { "title": "Investigation de la cause racine", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Correction du problème", "text": "step3.md", "verify": "verify3.sh" },
+      { "title": "Vérification fonctionnelle", "text": "step4.md", "verify": "verify4.sh" }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
