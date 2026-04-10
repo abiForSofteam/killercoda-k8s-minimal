@@ -1,0 +1,23 @@
+{
+  "title": "Configuration et gestion des Services (ClusterIP, NodePort, LoadBalancer)",
+  "description": "Diagnostiquer et corriger l'exposition d'une application via les types de Services Kubernetes : ClusterIP, NodePort et LoadBalancer.",
+  "difficulty": "intermediate",
+  "time": "30",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      { "title": "Inventaire de l'environnement", "text": "step1.md" },
+      { "title": "Investigation", "text": "step2.md" },
+      { "title": "Correction guidée", "text": "step3.md" },
+      { "title": "Vérification fonctionnelle", "text": "step4.md" }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
