@@ -1,18 +1,17 @@
 {
-  "title": "Configuration et gestion des Services (ClusterIP, NodePort, LoadBalancer)",
-  "description": "Diagnostiquer et corriger l'exposition d'une application via les types de Services Kubernetes : ClusterIP, NodePort et LoadBalancer.",
+  "title": "Configuration et gestion des Services",
+  "description": "Exposer et connecter des applications Kubernetes en maîtrisant les types de Services ClusterIP, NodePort et LoadBalancer.",
   "difficulty": "intermediate",
   "time": "30",
   "details": {
     "intro": {
-      "text": "intro.md",
-      "background": "background.sh"
+      "text": "intro.md"
     },
     "steps": [
-      { "title": "Inventaire de l'environnement", "text": "step1.md", "verify": "verify_step1.sh" },
-      { "title": "Investigation", "text": "step2.md", "verify": "verify_step2.sh" },
-      { "title": "Correction guidée", "text": "step3.md", "verify": "verify_step3.sh" },
-      { "title": "Vérification fonctionnelle", "text": "step4.md", "verify": "verify_step4.sh" }
+      { "title": "Inventaire de la situation", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Investigation", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Correction guidée", "text": "step3.md", "verify": "verify3.sh" },
+      { "title": "Vérification fonctionnelle", "text": "step4.md", "verify": "verify4.sh" }
     ],
     "finish": {
       "text": "finish.md"

@@ -1,32 +1,30 @@
-## Inventaire de l'environnement
+## Inventaire de la situation
 
-Commencez par dresser un état des lieux des ressources déployées dans le namespace `ecommerce`.
+Commencez par dresser un état des lieux complet du namespace `ecommerce` avant toute intervention.
 
-**Commande 1 — Etat général des ressources**
+**Lister toutes les ressources actives dans le namespace :**
 
 ```bash
 kubectl get all -n ecommerce
 ```
 
-Cette commande liste l'ensemble des ressources actives : Pods, Deployments, ReplicaSets et Services. Elle permet de distinguer ce qui tourne effectivement de ce qui est déclaré, et de repérer en un coup d'oeil les Services présents et leurs types (ClusterIP, NodePort, LoadBalancer).
+Cette commande expose en une seule passe les Deployments, ReplicaSets, Pods et Services présents. Observez les colonnes `READY` des Pods et `ENDPOINTS` des Services.
 
-**Commande 2 — Inspection des endpoints associés aux Services**
+**Inspecter les endpoints associés à chaque Service :**
 
 ```bash
 kubectl get endpoints -n ecommerce
 ```
 
-Les Endpoints représentent les adresses IP réelles des Pods sélectionnés par chaque Service. Un Service dont la colonne `ENDPOINTS` affiche `<none>` n'achemine aucun trafic, quelle que soit son apparence dans `kubectl get services`. C'est un signal d'alarme immédiat.
+Un Service Kubernetes route le trafic vers les Pods via ses `Endpoints`. Si la colonne `ENDPOINTS` affiche `<none>`, aucun Pod ne correspond au sélecteur du Service — le trafic est silencieusement abandonné.
 
-**Commande 3 — Détail des Services**
+**Examiner le détail d'un Service pour comparer sélecteur et labels des Pods :**
 
 ```bash
-kubectl describe service catalog-svc -n ecommerce
+kubectl describe service api-backend-svc -n ecommerce
 kubectl describe service frontend-svc -n ecommerce
 ```
 
-Le champ `Selector` indique quel label le Service utilise pour sélectionner ses Pods cibles. Le champ `Endpoints` confirme si des Pods ont effectivement été retenus. Le champ `TargetPort` précise sur quel port du conteneur le trafic est redirigé.
+`kubectl describe` affiche le sélecteur configuré sur le Service ainsi que les Endpoints résolus. Comparez ces informations avec les labels effectifs des Pods listés dans la commande précédente.
 
----
-
-Prenez note de ce que vous observez avant de passer à l'investigation.
+Notez précisément ce que vous observez sur chacun des deux Services avant de passer à l'investigation.

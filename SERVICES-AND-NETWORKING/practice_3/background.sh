@@ -7,31 +7,34 @@ sleep 10
 # Create namespace
 kubectl get namespace ecommerce &>/dev/null || kubectl create namespace ecommerce &>/dev/null
 
-# Deploy the catalog application
+# Deploy backend API application
 kubectl apply -f - &>/dev/null <<EOF
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalog
+  name: api-backend
   namespace: ecommerce
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: catalog
+      app: api-backend
   template:
     metadata:
       labels:
-        app: catalog
+        app: api-backend
     spec:
       containers:
-      - name: catalog
-        image: nginx:1.25
+      - name: api
+        image: hashicorp/http-echo:0.2.3
+        args:
+        - "-text=api-backend-response"
+        - "-listen=:8080"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 EOF
 
-# Deploy the frontend application
+# Deploy frontend application
 kubectl apply -f - &>/dev/null <<EOF
 apiVersion: apps/v1
 kind: Deployment
@@ -50,28 +53,33 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nginx:1.25
+        image: hashicorp/http-echo:0.2.3
+        args:
+        - "-text=frontend-response"
+        - "-listen=:8080"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 EOF
 
-# Create internal ClusterIP Service for catalog — label selector is intentionally wrong (bug: app: catalogue instead of app: catalog)
+# Create a ClusterIP Service for the backend with WRONG selector (fault injection)
+# The selector targets 'api' instead of 'api-backend' — pods will never match
 kubectl apply -f - &>/dev/null <<EOF
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalog-svc
+  name: api-backend-svc
   namespace: ecommerce
 spec:
   type: ClusterIP
   selector:
-    app: catalogue
+    app: api
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8080
 EOF
 
-# Create NodePort Service for frontend — port is intentionally wrong (targetPort: 8080 instead of 80)
+# Create a NodePort Service for the frontend with WRONG port mapping (fault injection)
+# The targetPort does not match the container port — traffic will be rejected
 kubectl apply -f - &>/dev/null <<EOF
 apiVersion: v1
 kind: Service
@@ -84,12 +92,12 @@ spec:
     app: frontend
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 9090
     nodePort: 30080
 EOF
 
-# Wait for deployments to be ready
-kubectl rollout status deployment/catalog -n ecommerce &>/dev/null
-kubectl rollout status deployment/frontend -n ecommerce &>/dev/null
+# Wait for deployments to be available
+kubectl rollout status deployment/api-backend -n ecommerce --timeout=120s &>/dev/null
+kubectl rollout status deployment/frontend -n ecommerce --timeout=120s &>/dev/null
 
 exit 0
