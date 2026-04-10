@@ -5,7 +5,8 @@
   "time": "30",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "background": "background.sh"
     },
     "steps": [
       { "title": "Inventaire de l'environnement", "text": "step1.md", "verify": "verify_step1.sh" },
