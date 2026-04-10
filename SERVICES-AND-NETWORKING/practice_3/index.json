@@ -8,10 +8,10 @@
       "text": "intro.md"
     },
     "steps": [
-      { "title": "Inventaire de l'environnement", "text": "step1.md" },
-      { "title": "Investigation", "text": "step2.md" },
-      { "title": "Correction guidée", "text": "step3.md" },
-      { "title": "Vérification fonctionnelle", "text": "step4.md" }
+      { "title": "Inventaire de l'environnement", "text": "step1.md", "verify": "verify_step1.sh" },
+      { "title": "Investigation", "text": "step2.md", "verify": "verify_step2.sh" },
+      { "title": "Correction guidée", "text": "step3.md", "verify": "verify_step3.sh" },
+      { "title": "Vérification fonctionnelle", "text": "step4.md", "verify": "verify_step4.sh" }
     ],
     "finish": {
       "text": "finish.md"
