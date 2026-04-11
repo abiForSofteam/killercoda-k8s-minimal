@@ -1,0 +1,23 @@
+{
+  "title": "Installation d'un cluster avec kubeadm",
+  "description": "Joindre un nœud worker à un control-plane existant en utilisant kubeadm join.",
+  "difficulty": "intermediate",
+  "time": "30",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      { "title": "État des lieux du cluster", "text": "step1.md", "verify": "verify1.sh" },
+      { "title": "Identification des prérequis manquants", "text": "step2.md", "verify": "verify2.sh" },
+      { "title": "Jonction du nœud worker", "text": "step3.md", "verify": "verify3.sh" },
+      { "title": "Vérification fonctionnelle du cluster", "text": "step4.md", "verify": "verify4.sh" }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
